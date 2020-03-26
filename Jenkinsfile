@@ -31,9 +31,7 @@ pipeline {
 
         stage('Deliver') {
             agent {
-                docker {
-                    image 'localhost'
-                }
+                    'localhost'
             }
             steps {
                 sh 'pyinstaller --onefile sources/add2vals.py'
