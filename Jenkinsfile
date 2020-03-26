@@ -31,7 +31,9 @@ pipeline {
 
         stage('Deliver') {
             agent {
-                    'localhost'
+		node {
+                    label 'localhost'
+		}
             }
             steps {
                 sh 'pyinstaller --onefile sources/add2vals.py'
