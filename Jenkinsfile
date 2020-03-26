@@ -36,7 +36,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'source /etc/profile && pyinstaller --onefile sources/add2vals.py'
+                sh 'whereis pyinstaller	 && pyinstaller --onefile sources/add2vals.py'
             }
             post {
                 success {
